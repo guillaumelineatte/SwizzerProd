@@ -22,7 +22,7 @@ export default function Resume() {
                   />
                   <div>
                     <h1 className="text-3xl font-bold mb-2">Alex Thompson</h1>
-                    <p className="text-xl opacity-90">Senior Video Editor & Post-Production Specialist</p>
+                    <p className="text-xl opacity-90">Monteur Vidéo Senior & Spécialiste Post-Production</p>
                     <div className="flex items-center space-x-6 mt-3 text-sm">
                       <span>alex@alexedits.com</span>
                       <span>+1 (555) 123-4567</span>
@@ -34,70 +34,70 @@ export default function Resume() {
 
               <div className="p-8">
                 <section className="mb-8">
-                  <h2 className="text-2xl font-bold text-white mb-4">Professional Summary</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4">Résumé Professionnel</h2>
                   <p className="text-gray-300 leading-relaxed">
-                    Creative and technically proficient Video Editor with 8+ years of experience in post-production for weddings, corporate videos, documentaries, and commercials. Expertise in storytelling, color grading, and audio post-production using industry-standard software. Proven track record of delivering high-quality content that exceeds client expectations while meeting tight deadlines.
+                    Monteur vidéo créatif et techniquement compétent avec plus de 8 ans d'expérience en post-production pour mariages, vidéos corporate, documentaires et publicités. Expertise en narration, étalonnage couleur et post-production audio utilisant des logiciels standards de l'industrie. Historique prouvé de livraison de contenu de haute qualité qui dépasse les attentes des clients tout en respectant les délais serrés.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h2 className="text-2xl font-bold text-white mb-6">Professional Experience</h2>
+                  <h2 className="text-2xl font-bold text-white mb-6">Expérience Professionnelle</h2>
 
                   <div className="space-y-8">
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h3 className="text-xl font-semibold text-white">Senior Video Editor</h3>
+                          <h3 className="text-xl font-semibold text-white">Monteur Vidéo Senior</h3>
                           <p className="text-blue-400 font-medium">Swizzer Prod (Freelance)</p>
                         </div>
-                        <span className="text-gray-400 text-sm">2019 - Present</span>
+                        <span className="text-gray-400 text-sm">2019 - Présent</span>
                       </div>
                       <ul className="text-gray-300 space-y-1 ml-4">
-                        <li>• Edited 150+ wedding videos, corporate presentations, and commercial projects</li>
-                        <li>• Developed streamlined post-production workflows, reducing delivery time by 30%</li>
-                        <li>• Collaborated with clients to understand vision and deliver compelling visual narratives</li>
-                        <li>• Managed multiple projects simultaneously while maintaining quality standards</li>
+                        <li>• Monté plus de 150 vidéos de mariage, présentations corporate et projets commerciaux</li>
+                        <li>• Développé des workflows de post-production optimisés, réduisant le temps de livraison de 30%</li>
+                        <li>• Collaboré avec les clients pour comprendre leur vision et livrer des récits visuels captivants</li>
+                        <li>• Géré plusieurs projets simultanément tout en maintenant les standards de qualité</li>
                       </ul>
                     </div>
 
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h3 className="text-xl font-semibold text-white">Video Editor</h3>
+                          <h3 className="text-xl font-semibold text-white">Monteur Vidéo</h3>
                           <p className="text-blue-400 font-medium">Creative Media Studios</p>
                         </div>
                         <span className="text-gray-400 text-sm">2017 - 2019</span>
                       </div>
                       <ul className="text-gray-300 space-y-1 ml-4">
-                        <li>• Edited promotional videos and documentaries for various clients</li>
-                        <li>• Specialized in color correction and audio post-production</li>
-                        <li>• Mentored junior editors and interns in post-production techniques</li>
-                        <li>• Contributed to award-winning documentary series</li>
+                        <li>• Monté des vidéos promotionnelles et documentaires pour divers clients</li>
+                        <li>• Spécialisé en correction couleur et post-production audio</li>
+                        <li>• Mentoré des monteurs juniors et stagiaires dans les techniques de post-production</li>
+                        <li>• Contribué à des séries documentaires primées</li>
                       </ul>
                     </div>
 
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h3 className="text-xl font-semibold text-white">Assistant Video Editor</h3>
+                          <h3 className="text-xl font-semibold text-white">Assistant Monteur</h3>
                           <p className="text-blue-400 font-medium">MediaFlow Productions</p>
                         </div>
                         <span className="text-gray-400 text-sm">2016 - 2017</span>
                       </div>
                       <ul className="text-gray-300 space-y-1 ml-4">
-                        <li>• Assisted senior editors with large-scale commercial and film projects</li>
-                        <li>• Organized media assets and maintained project databases</li>
-                        <li>• Performed basic editing tasks and quality control checks</li>
+                        <li>• Assisté les monteurs seniors sur des projets commerciaux et cinématographiques à grande échelle</li>
+                        <li>• Organisé les assets média et maintenu les bases de données de projets</li>
+                        <li>• Effectué des tâches de montage de base et des contrôles qualité</li>
                       </ul>
                     </div>
                   </div>
                 </section>
 
                 <section className="mb-8">
-                  <h2 className="text-2xl font-bold text-white mb-6">Technical Skills</h2>
+                  <h2 className="text-2xl font-bold text-white mb-6">Compétences Techniques</h2>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-3">Software Proficiency</h3>
+                      <h3 className="text-lg font-semibold text-white mb-3">Maîtrise des Logiciels</h3>
                       <div className="space-y-2">
                         <div className="flex justify-between items-center">
                           <span className="text-gray-300">Adobe Premiere Pro</span>
@@ -105,64 +105,64 @@ export default function Resume() {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-300">Adobe After Effects</span>
-                          <span className="text-sm text-blue-400 font-medium">Advanced</span>
+                          <span className="text-sm text-blue-400 font-medium">Avancé</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-300">DaVinci Resolve</span>
-                          <span className="text-sm text-blue-400 font-medium">Advanced</span>
+                          <span className="text-sm text-blue-400 font-medium">Avancé</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-300">Final Cut Pro</span>
-                          <span className="text-sm text-blue-400 font-medium">Proficient</span>
+                          <span className="text-sm text-blue-400 font-medium">Compétent</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-300">Adobe Audition</span>
-                          <span className="text-sm text-blue-400 font-medium">Advanced</span>
+                          <span className="text-sm text-blue-400 font-medium">Avancé</span>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-3">Core Competencies</h3>
+                      <h3 className="text-lg font-semibold text-white mb-3">Compétences Principales</h3>
                       <ul className="text-gray-300 space-y-1">
-                        <li>• Narrative & Documentary Editing</li>
-                        <li>• Color Grading & Correction</li>
-                        <li>• Audio Post-Production</li>
-                        <li>• Motion Graphics Design</li>
-                        <li>• Project Management</li>
-                        <li>• Client Communication</li>
-                        <li>• Workflow Optimization</li>
+                        <li>• Montage Narratif & Documentaire</li>
+                        <li>• Étalonnage & Correction Couleur</li>
+                        <li>• Post-Production Audio</li>
+                        <li>• Design Motion Graphics</li>
+                        <li>• Gestion de Projet</li>
+                        <li>• Communication Client</li>
+                        <li>• Optimisation Workflow</li>
                       </ul>
                     </div>
                   </div>
                 </section>
 
                 <section className="mb-8">
-                  <h2 className="text-2xl font-bold text-white mb-6">Education</h2>
+                  <h2 className="text-2xl font-bold text-white mb-6">Formation</h2>
                   <div>
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="text-xl font-semibold text-white">Bachelor of Arts in Film Studies</h3>
+                        <h3 className="text-xl font-semibold text-white">Licence en Études Cinématographiques</h3>
                         <p className="text-blue-400 font-medium">University of Southern California</p>
                       </div>
                       <span className="text-gray-400 text-sm">2012 - 2016</span>
                     </div>
-                    <p className="text-gray-300">Concentration in Post-Production and Digital Media</p>
+                    <p className="text-gray-300">Spécialisation en Post-Production et Médias Numériques</p>
                   </div>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-6">Awards & Recognition</h2>
+                  <h2 className="text-2xl font-bold text-white mb-6">Prix & Reconnaissance</h2>
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Best Wedding Film</h3>
+                      <h3 className="text-lg font-semibold text-white">Meilleur Film de Mariage</h3>
                       <p className="text-gray-300">Los Angeles Wedding Videography Awards - 2022</p>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Excellence in Documentary Editing</h3>
-                      <p className="text-gray-300">Independent Film Festival - 2021</p>
+                      <h3 className="text-lg font-semibold text-white">Excellence en Montage Documentaire</h3>
+                      <p className="text-gray-300">Festival du Film Indépendant - 2021</p>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Client Choice Award</h3>
+                      <h3 className="text-lg font-semibold text-white">Prix Choix Client</h3>
                       <p className="text-gray-300">Creative Media Studios - 2019</p>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ export default function Resume() {
               <div className="bg-black px-8 py-6">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer whitespace-nowrap">
                   <i className="ri-download-line mr-2"></i>
-                  Download PDF Resume
+                  Télécharger le CV en PDF
                 </button>
               </div>
             </div>

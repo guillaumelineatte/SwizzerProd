@@ -34,6 +34,11 @@ jobs:
     - name: Build
       run: npm run build
       
+    - name: Copy assets to root
+      run: |
+        cp -r out/logo-swizzer_1080p out/
+        cp out/favicon.ico out/
+      
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
