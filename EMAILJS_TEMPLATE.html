@@ -1,0 +1,78 @@
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 12px; background-color: #f8f9fa; padding: 20px;">
+  <div style="background-color: #1a1a1a; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #00d4ff; font-size: 24px;">🎬 Nouveau message de contact - Swizzer Prod</h2>
+    <p style="margin: 10px 0 0 0; color: #cccccc;">Un nouveau message a été reçu via votre site web.</p>
+  </div>
+
+  <div
+    style="
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      background-color: white;
+    "
+  >
+    <table role="presentation" style="width: 100%;">
+      <tr>
+        <td style="vertical-align: top; padding-right: 20px;">
+          <div
+            style="
+              padding: 15px;
+              margin: 0;
+              background: linear-gradient(135deg, #00d4ff, #8b5cf6);
+              border-radius: 10px;
+              font-size: 30px;
+              text-align: center;
+              color: white;
+            "
+            role="img"
+          >
+            👤
+          </div>
+        </td>
+        <td style="vertical-align: top; width: 100%;">
+          <div style="color: #2c3e50; font-size: 18px; margin-bottom: 10px;">
+            <strong>{{from_name}}</strong>
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <span style="color: #666; font-size: 14px;">📧 Email :</span>
+            <span style="color: #2c3e50; font-size: 14px; margin-left: 5px;">{{from_email}}</span>
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <span style="color: #666; font-size: 14px;">🎯 Type de projet :</span>
+            <span style="color: #2c3e50; font-size: 14px; margin-left: 5px;">{{project_type}}</span>
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <span style="color: #666; font-size: 14px;">⏰ Reçu le :</span>
+            <span style="color: #2c3e50; font-size: 14px; margin-left: 5px;">{{time}}</span>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <span style="color: #666; font-size: 14px; display: block; margin-bottom: 10px;">💬 Message :</span>
+            <div style="
+              background-color: #f8f9fa;
+              padding: 15px;
+              border-radius: 8px;
+              border-left: 4px solid #00d4ff;
+              font-size: 16px;
+              line-height: 1.5;
+              color: #2c3e50;
+            ">
+              {{message}}
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 20px; text-align: center; color: #666; font-size: 12px;">
+    <p style="margin: 0;">---
+    Envoyé depuis votre site web <strong>Swizzer Prod</strong>
+    Répondez directement à cet email pour contacter le client.</p>
+  </div>
+</div>

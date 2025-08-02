@@ -1,0 +1,76 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+.scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+.scroll-animate:nth-child(3) { transition-delay: 0.3s; }
+.scroll-animate:nth-child(4) { transition-delay: 0.4s; }
+
+.scroll-animate.slide-left {
+  transform: translateX(-50px);
+}
+
+.scroll-animate.slide-right {
+  transform: translateX(50px);
+}
+
+.scroll-animate.scale-in {
+  transform: scale(0.8) translateY(30px);
+}
+
+.scroll-animate.fade-in {
+  transform: none;
+}
+
+#projects .scroll-animate {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease-out;
+}
+
+#projects .scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#projects .scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+#projects .scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+#projects .scroll-animate:nth-child(3) { transition-delay: 0.3s; }
+#projects .scroll-animate:nth-child(4) { transition-delay: 0.4s; }
+#projects .scroll-animate:nth-child(5) { transition-delay: 0.5s; }
+#projects .scroll-animate:nth-child(6) { transition-delay: 0.6s; }
+
+#about .scroll-animate {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease-out;
+}
+
+#about .scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about .scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+#about .scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+#about .scroll-animate:nth-child(3) { transition-delay: 0.3s; }
+#about .scroll-animate:nth-child(4) { transition-delay: 0.4s; }
+#about .scroll-animate:nth-child(5) { transition-delay: 0.5s; }
+#about .scroll-animate:nth-child(6) { transition-delay: 0.6s; }
+
+html {
+  scroll-behavior: smooth;
+}
