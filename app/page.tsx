@@ -4,6 +4,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -187,10 +188,13 @@ export default function Home() {
 
                 <div className="relative order-1 lg:order-2 scroll-animate slide-right">
                   <div className="relative overflow-hidden rounded-2xl">
-                    <img
+                    <Image
                       src="/logo-swizzer_1080p/logo-swizzer_couleurs_1080p.png"
                       alt="Alex - Video Editor"
+                      width={500}
+                      height={500}
                       className="w-full h-96 lg:h-[500px] object-cover object-top"
+                      priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
