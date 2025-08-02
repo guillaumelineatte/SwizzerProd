@@ -62,10 +62,10 @@ export default function Header() {
               className="text-white hover:text-cyan-400 transition-colors whitespace-nowrap cursor-pointer"
             >
               Contact
-            </button>
+            </button>{/*
             <Link href="/resume" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 px-4 py-2 rounded-lg transition-all duration-300 whitespace-nowrap cursor-pointer">
               CV
-            </Link>
+            </Link> */}
           </nav>
 
           <button
@@ -108,10 +108,10 @@ export default function Header() {
                 className="block text-white hover:text-cyan-400 transition-colors cursor-pointer"
               >
                 Contact
-              </button>
+              </button>{/*
               <Link href="/resume" className="block bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer">
                 CV
-              </Link>
+              </Link> */}
             </div>
           </div>
         )}
