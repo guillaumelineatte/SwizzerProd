@@ -188,13 +188,10 @@ export default function Home() {
 
                 <div className="relative order-1 lg:order-2 scroll-animate slide-right">
                   <div className="relative overflow-hidden rounded-2xl">
-                    <Image
+                    <img
                       src="/logo-swizzer_1080p/logo-swizzer_couleurs_1080p.png"
                       alt="Alex - Video Editor"
-                      width={500}
-                      height={500}
                       className="w-full h-96 lg:h-[500px] object-cover object-top"
-                      priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>

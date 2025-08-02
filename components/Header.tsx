@@ -21,13 +21,12 @@ export default function Header() {
       <div className="container mx-auto px-1">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-1">
-            <Image
+            <img
               src="/logo-swizzer_1080p/logo-swizzer_blanc_1080p.png"
               alt="Swizzer Logo"
               width={80}
               height={80}
               className="object-contain"
-              priority
             />
             <span className="text-white font-bold text-lg">Swizzer</span>
           </div>
