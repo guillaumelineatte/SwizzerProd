@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development next dev -H 0.0.0.0 -p 3000",
     "dev:turbo": "cross-env NODE_ENV=development next dev --turbopack -H 0.0.0.0 -p 3000",
-    "build": "next build",
+    "build": "next build && npm run copy-assets",
+    "copy-assets": "cp -r public/logo-swizzer_1080p out/ && cp public/favicon.ico out/",
     "lint": "next lint"
   },
   "dependencies": {
