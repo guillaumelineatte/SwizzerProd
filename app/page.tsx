@@ -7,10 +7,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
+import type { Video } from '@/types/video';
 
 export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [videos, setVideos] = useState<Video[]>([]);
 
   useEffect(() => {
     emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "");
@@ -39,6 +41,13 @@ export default function Home() {
     setTimeout(observeElements, 500);
 
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    fetch('/api/videos')
+      .then((res) => res.json())
+      .then((data) => Array.isArray(data) && setVideos(data))
+      .catch(() => {/* Pas de vidéos disponibles */});
   }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -397,59 +406,71 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-12 gap-6 mb-12">
-              <div className="lg:col-span-8 group cursor-pointer scroll-animate">
-                <a href="https://www.youtube.com/watch?v=zTaxhA-QTU0" target="_blank" rel="noopener noreferrer">
-                  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 p-8 h-96">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <img
-                      src="https://img.youtube.com/vi/zTaxhA-QTU0/maxresdefault.jpg"
-                      alt="Featured Project"
-                      className="absolute inset-0 w-full h-full object-cover object-top rounded-2xl opacity-80 group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="relative z-10 h-full flex flex-col justify-end">
-                        <div className="flex items-center gap-3 mb-4">
-                          <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">Podcast</span>
+            {videos.length > 0 && (
+              <div className="grid lg:grid-cols-12 gap-6 mb-12">
+                {/* Vidéo principale (grande carte) */}
+                <div className="lg:col-span-8 group cursor-pointer">
+                  <a href={videos[0].youtubeUrl} target="_blank" rel="noopener noreferrer">
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 h-96">
+                      <div className="absolute inset-0 bg-black/20"></div>
+                      <img
+                        src={videos[0].thumbnailUrl}
+                        alt={videos[0].title}
+                        className="absolute inset-0 w-full h-full object-cover object-top rounded-2xl opacity-80 group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                            {videos[0].title}
+                          </span>
                         </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div className="lg:col-span-4 space-y-6">
-                <a href="https://www.youtube.com/watch?v=TlQSxtZN3EA" target="_blank" rel="noopener noreferrer">
-                  <div className="group cursor-pointer scroll-animate">
-                    <div className="relative overflow-hidden rounded-xl h-44">
-                      <img
-                        src="https://img.youtube.com/vi/TlQSxtZN3EA/maxresdefault.jpg"
-                        alt="Wedding Project"
-                        className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                      <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">Concept</span>
+                        {videos[0].description && (
+                          <p className="text-white/80 text-sm">{videos[0].description}</p>
+                        )}
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
 
-                <a href="https://www.youtube.com/watch?v=2ShuHJMoXAY" target="_blank" rel="noopener noreferrer">
-                  <div className="group cursor-pointer scroll-animate">
-                    <div className="relative overflow-hidden rounded-xl h-44">
-                      <img
-                        src="https://img.youtube.com/vi/2ShuHJMoXAY/maxresdefault.jpg"
-                        alt="Corporate Project"
-                        className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                      <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">Débat</span>
-                      </div>
-                    </div>
+                {/* Vidéos secondaires (colonne droite) */}
+                {videos.length > 1 && (
+                  <div className="lg:col-span-4 space-y-6">
+                    {videos.slice(1, 3).map((video) => (
+                      <a key={video.id} href={video.youtubeUrl} target="_blank" rel="noopener noreferrer">
+                        <div className="group cursor-pointer">
+                          <div className="relative overflow-hidden rounded-xl h-44">
+                            <img
+                              src={video.thumbnailUrl}
+                              alt={video.title}
+                              className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div className="absolute bottom-4 left-4 right-4">
+                              <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                                {video.title}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    ))}
                   </div>
-                </a>
+                )}
               </div>
-            </div>
+            )}
+
+            {videos.length > 0 && (
+              <div className="text-center mb-10">
+                <Link
+                  href="/videos"
+                  className="inline-flex items-center gap-2 border border-gray-700 hover:border-cyan-500/50 text-gray-300 hover:text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300"
+                >
+                  <i className="ri-film-line"></i>
+                  Voir tous les projets
+                  <i className="ri-arrow-right-line"></i>
+                </Link>
+              </div>
+            )}
 
             <div className="bg-gradient-to-r from-gray-900 to-black rounded-2xl p-8 border border-gray-800 scroll-animate">
               <div className="grid md:grid-cols-4 gap-8 text-center">
