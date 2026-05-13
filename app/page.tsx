@@ -411,12 +411,12 @@ export default function Home() {
                 {/* Vidéo principale (grande carte) */}
                 <div className="lg:col-span-8 group cursor-pointer">
                   <a href={videos[0].youtubeUrl} target="_blank" rel="noopener noreferrer">
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 h-96">
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 aspect-video">
                       <div className="absolute inset-0 bg-black/20"></div>
                       <img
                         src={videos[0].thumbnailUrl}
                         alt={videos[0].title}
-                        className="absolute inset-0 w-full h-full object-cover object-top rounded-2xl opacity-80 group-hover:scale-105 transition-transform duration-700"
+                        className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-80 group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="relative z-10 h-full flex flex-col justify-end p-6">
                         <div className="flex items-center gap-3 mb-2">
@@ -438,11 +438,11 @@ export default function Home() {
                     {videos.slice(1, 3).map((video) => (
                       <a key={video.id} href={video.youtubeUrl} target="_blank" rel="noopener noreferrer">
                         <div className="group cursor-pointer">
-                          <div className="relative overflow-hidden rounded-xl h-44">
+                          <div className="relative overflow-hidden rounded-xl aspect-video">
                             <img
                               src={video.thumbnailUrl}
                               alt={video.title}
-                              className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div className="absolute bottom-4 left-4 right-4">
