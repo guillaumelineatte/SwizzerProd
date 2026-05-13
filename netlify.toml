@@ -1,11 +1,5 @@
 [build]
   command = "npx prisma generate && npm run build"
-  publish = "out"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 
 [[headers]]
   for = "/*"
