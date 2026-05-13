@@ -1,6 +1,6 @@
 [build]
   command = "npx prisma generate && npm run build"
-  publish = ".netlify/output/public"
+  publish = ".next"
 
 [[headers]]
   for = "/*"
