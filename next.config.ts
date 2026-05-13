@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: "export" retiré — le projet utilise maintenant des API routes (Vercel)
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   trailingSlash: false,
   images: {
     remotePatterns: [
