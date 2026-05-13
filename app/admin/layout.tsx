@@ -25,49 +25,54 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="min-h-screen bg-black">
       {/* Header admin */}
       <header className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="container mx-auto px-6 h-16 flex items-center justify-between gap-4">
+
+          {/* Logo + titre */}
+          <div className="flex items-center gap-3 min-w-0">
             <Image
-              src="/logo-swizzer_1080p/logo-swizzer_coin_1080p.png"
+              src="/logo-swizzer_1080p/logo-swizzer_blanc_1080p.png"
               alt="Swizzer Prod"
-              width={36}
-              height={36}
-              className="object-contain"
+              width={110}
+              height={40}
+              className="object-contain flex-shrink-0"
             />
-            <div>
-              <span className="text-white font-bold text-sm">Swizzer Prod</span>
-              <span className="text-cyan-400 text-xs block">Administration</span>
+            <div className="hidden sm:block h-6 w-px bg-gray-700" />
+            <div className="hidden sm:block">
+              <span className="text-cyan-400 text-xs font-medium tracking-widest uppercase">Administration</span>
             </div>
           </div>
 
-          <nav className="flex items-center gap-6">
+          {/* Nav */}
+          <nav className="flex items-center gap-1 sm:gap-2">
             <a
               href="/admin"
-              className={`text-sm font-medium transition-colors ${
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 pathname === '/admin'
-                  ? 'text-cyan-400'
-                  : 'text-gray-400 hover:text-white'
+                  ? 'bg-cyan-500/10 text-cyan-400'
+                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
               }`}
             >
-              <i className="ri-film-line mr-1"></i>
-              Vidéos
+              <i className="ri-film-line text-base"></i>
+              <span className="hidden sm:inline">Vidéos</span>
             </a>
             <a
               href="/"
               target="_blank"
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
             >
-              <i className="ri-external-link-line mr-1"></i>
-              Voir le site
+              <i className="ri-external-link-line text-base"></i>
+              <span className="hidden sm:inline">Voir le site</span>
             </a>
+            <div className="w-px h-5 bg-gray-700 mx-1" />
             <button
               onClick={handleLogout}
-              className="text-sm text-gray-400 hover:text-red-400 transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-colors cursor-pointer"
             >
-              <i className="ri-logout-box-line mr-1"></i>
-              Déconnexion
+              <i className="ri-logout-box-line text-base"></i>
+              <span className="hidden sm:inline">Déconnexion</span>
             </button>
           </nav>
+
         </div>
       </header>
 
